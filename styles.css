@@ -1,0 +1,146 @@
+/* Global dark theme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    font-size: 17px; /* Increased base font size */
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #222;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Flex layout for upload + buttons */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Shared styles for input and buttons */
+.controls input[type="file"],
+.controls button {
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* File input */
+#fileInput {
+    flex: 2;
+    background-color: #222;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+/* Buttons */
+button {
+    flex: 1;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.scan-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+button.reset-button {
+    background-color: #757575;
+    color: white;
+}
+
+/* Result message */
+.result {
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+    font-size: 16px;
+}
+
+.result.phishing {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.result.safe {
+    background-color: #388e3c;
+    color: white;
+}
+
+/* Severity block */
+.severity {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    background-color: #d32f2f;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+    .controls {
+        flex-direction: column;
+    }
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

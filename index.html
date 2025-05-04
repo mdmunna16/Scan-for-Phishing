@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan for Phishing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Scan for Phishing</h1>
+
+        
+
+        <textarea id="messageInput" placeholder="Enter the message you received..."></textarea>
+
+        <div class="controls">
+            <input type="file" id="fileInput" accept=".eml,.txt,.pdf" onchange="handleFileUpload()" />
+            <button class="scan-button" onclick="scanMessage()">Scan</button>
+            <button class="reset-button" onclick="resetForm()">Reset</button>
+        </div>
+        
+
+        <div id="result" class="result"></div>
+        <div id="severity" class="severity"></div>
+    </div>
+    <div class="footer">
+        <p>Developed by: <a href="https://www.linkedin.com/in/itsmdmunna/" target="_blank" class="footer-link">Md Munna</a></p>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
